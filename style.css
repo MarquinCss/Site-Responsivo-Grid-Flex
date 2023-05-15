@@ -1,0 +1,184 @@
+
+
+body{
+    overflow-x:hidden;
+}
+
+.main-header{
+    padding:15px;
+    background-color: #252525;
+}
+
+nav{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.menu{
+    list-style: none; 
+    display: flex; 
+}
+
+.menu li a{
+    padding:26px;
+    color:#fff; 
+    text-decoration: none;
+    font-size:23px;
+}
+
+.bar{
+    width:25px;
+    height:4px;
+    background-color:#fff;
+    margin:4px; 
+  
+}
+
+.hamburger-menu{
+    cursor:pointer;
+    display: none;
+
+}
+
+
+
+.menu.ativo{
+    display:flex; 
+}
+
+.hamburger-menu:active{
+    animation: rotate .2s linear infinite;
+}
+
+@keyframes rotate{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(230deg);
+    }
+  }
+
+.menu li{
+    margin: 10px 0;
+}
+
+main{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap:50px;
+}
+
+h2{
+    text-align: center;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items:center;
+    gap:10px;
+}
+
+p{
+    text-align: justify;
+}
+
+.image{
+filter:grayscale(100%);
+width:100%;
+height:200px;
+border-radius:10px;
+transition:.2s;
+}
+
+.image:hover{
+filter:contrast(90%);
+}
+
+footer{
+  position:relative;
+    background-color:#252525;
+    width:100%;
+    margin-top:100px;
+}
+
+.container-footer{
+    display: flex;
+    justify-content:space-around;
+    gap:30px;
+  
+}
+
+footer h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#fff;
+    font-size:25px;
+}
+
+.fa-brands{
+    font-size:50px;
+}
+
+.fa-solid{
+    font-size:50px;
+}
+
+.redes{
+    display: flex;
+    gap:15px;
+}
+
+.coluna p{
+    color:#fff;
+}
+@media (max-width:768px) {
+
+    .hamburger-menu{
+        display:block;
+    }
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li:hover{
+        transition: ease 6s;
+    position:relative;
+    right:25px;
+    }
+    .conteudo{
+        display: grid;
+        grid-template-columns:100%;
+        align-items:center;
+        gap:10px;
+      
+    }
+
+    .image{
+        height:300px;
+        object-fit: cover;
+    }
+
+    .container-footer{
+       display: inline-block;
+       text-align: center;
+    }
+    .coluna{
+        margin-bottom:30px;
+    }
+
+    .coluna p{
+        text-align: center;
+    }
+    .redes{
+        display: flex;
+        gap:5px;
+    }
+    
+
+}
